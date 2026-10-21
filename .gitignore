@@ -1,0 +1,6 @@
+__pycache__/
+*.py[cod]
+myvm/
+venv/
+.env
+db.sqlite3

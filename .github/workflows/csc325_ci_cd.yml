@@ -69,4 +69,11 @@ jobs:
       - name: Deploy
         run: |
           echo "Deploying the application..."
-          echo "Deployment complete."
+          if [ -n "$RENDER_DEPLOY_HOOK_URL" ]; then
+            echo "Triggering Render deploy..."
+            curl -f -X POST "$RENDER_DEPLOY_HOOK_URL"
+          else
+            echo "No Render deploy hook configured; echo deploy only."
+          fi
+        env:
+          RENDER_DEPLOY_HOOK_URL: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}

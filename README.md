@@ -38,3 +38,8 @@ Runs automatically on every push to `main`, in four stages:
 
 - `main` — protected by a ruleset
 - `feature/add-status-endpoint` — feature branch for new work
+
+## Live deployment
+
+The app is deployed on Render (free tier) at https://cscmodule8.onrender.com —
+the pipeline's Deploy stage triggers a Render deploy via deploy hook after Test passes.

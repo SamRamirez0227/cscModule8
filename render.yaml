@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: cscmodule8
+    env: python
+    plan: free
+    autoDeploy: false
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn csc325DjangoProject.wsgi:application --bind 0.0.0.0:$PORT
+    envVars:
+      - key: DEBUG
+        value: "False"
+      - key: DJANGO_SECRET_KEY
+        generateValue: true

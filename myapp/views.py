@@ -17,4 +17,4 @@ def about(request):
 @api_view(["GET"])
 def api_hello(request):
     """Simple Django REST Framework API endpoint."""
-    return Response({"message": "Hello, World!", "status": "ok"})
+    return Response({"message": "Hello, World!", "status": "ok", "version": "1.1"})

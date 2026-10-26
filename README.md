@@ -43,3 +43,8 @@ Runs automatically on every push to `main`, in four stages:
 
 The app is deployed on Render (free tier) at https://cscmodule8.onrender.com —
 the pipeline's Deploy stage triggers a Render deploy via deploy hook after Test passes.
+
+
+## AI-use note
+
+I used Muse (Meta's AI coding assistant) to help scaffold the Django/DRF backend, the GitHub Actions workflow, and the Render deployment configuration, and to troubleshoot git issues while preparing the video. I reviewed the generated code and configuration, ran the test suite locally (3 tests, all passing), made the on-camera version-field change myself, and verified the pipeline run was green and the deployed app shows the change live.

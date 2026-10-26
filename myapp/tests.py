@@ -31,5 +31,5 @@ class ApiHelloViewTests(SimpleTestCase):
         self.assertEqual(response.status_code, 200)
         self.assertJSONEqual(
             response.content,
-            {"message": "Hello, World!", "status": "ok"},
+            {"message": "Hello, World!", "status": "ok", "version": "1.1"},
         )
